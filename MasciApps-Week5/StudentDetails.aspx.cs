@@ -12,6 +12,43 @@ namespace MasciApps_Week5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack && Request.QueryString.Count > 0)
+            {
+                this.GetStudent();
+            }
+        }
+
+        /**
+         * <summary>
+         * 
+         * </summary>
+         * @method GetStudent()
+         * @returns {void}
+         */ 
+        protected void GetStudent()
+        {
+            //populate the form with existing student record (pulling from the queryString)
+            int studentID = Convert.ToInt32(Request.QueryString["StudentID"]);
+
+            //connect to the db with EF
+            using (DefaultConnection db = new DefaultConnection())
+            {
+                //populate a student instance with the StudentID from the URL parameter
+                Student updateStudent = (from student in db.Students
+                                          where student.StudentID == studentID
+                                          select student).FirstOrDefault();
+
+                //map the student properties to the form controls
+                if (updateStudent != null)
+                {
+                    LastNameTextBox.Text = updateStudent.LastName;
+                    FirstNameTextBox.Text = updateStudent.FirstMidName;
+                    EnrollmentDateTextBox.Text = updateStudent.EnrollmentDate.ToString("yyyy-MM-dd");
+                    LastNameTextBox.Text = updateStudent.LastName;
+                }    
+
+                //update the student
+            }
 
         }
 
