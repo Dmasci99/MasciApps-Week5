@@ -115,6 +115,7 @@
       <LastGenOutput>ContosoModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\moby.js" />
+    <Content Include="Scripts\portfolio-template.js" />
     <Content Include="StudentDetails.aspx" />
     <Content Include="Students.aspx" />
     <Content Include="UserControls\Footer.ascx" />

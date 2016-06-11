@@ -20,7 +20,7 @@
                         <asp:HyperLinkField runat="server" Text="<i class='fa fa-pencil'></i>" HeaderText="<i class='fa fa-pencil'></i>" 
                             DataNavigateUrlFields="DepartmentID" DataNavigateUrlFormatString="DepartmentDetails.aspx?DepartmentID={0}"
                             NavigateUrl="~/DepartmentDetails.aspx" />                        
-                        <asp:CommandField runat="server" DeleteText="<i class='fa fa-trash-o'></i>" HeaderText="<i class='fa fa-trash-o'></i>" 
+                        <asp:CommandField runat="server" DeleteText="<i class='fa fa-trash-o deleteDept'></i>" HeaderText="<i class='fa fa-trash-o'></i>" 
                             ShowDeleteButton="true" ButtonType="Link" />    
                     </Columns>
                 </asp:GridView>
