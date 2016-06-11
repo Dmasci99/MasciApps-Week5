@@ -2,10 +2,12 @@
 
 <asp:Content ID="StudentsPageContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div id="students-page">
+    <div class="interior-page" id="students-page">
         <div class="container">
 
-            <div class="button button1"><a href="StudentDetails.aspx"><i class="fa fa-plus-circle"></i> Add Student</a></div>
+            <div class="button button1">
+                <a href="StudentDetails.aspx"><i class="fa fa-plus-circle"></i> Add Student</a>
+            </div>
             <div class="students-container">
                 <div class="pagesize">
                     <label>Records Per Page: </label>

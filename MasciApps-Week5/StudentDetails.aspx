@@ -2,7 +2,7 @@
 
 <asp:Content ID="StudentDetailsPageContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div id="studentdetails-page">
+    <div class="interior-page" id="studentdetails-page">
         <div class="container custom-form">
 
             <div class="input-container">
